@@ -39,7 +39,7 @@ The pruned model will have `pruned.pth.tar` at the end of its name.
 ## Fine-tune
 
 ```shell
-python main.py --refine logs/vggnetpruned.pth.tar --dataset cifar10 --arch vgg --depth 19 --epochs 160 --name [REFINED_MODEL_NAME] --save [DIRECTORY TO SAVE MODEL]
+python main.py --refine [PRUNED_MODEL_NAME] --dataset cifar10 --arch vgg --depth 19 --epochs 160 --name [REFINED_MODEL_NAME] --save [DIRECTORY TO SAVE MODEL]
 ```
 
 

@@ -30,7 +30,7 @@ python main.py -sr --s 0.0045 --dataset cifar10 --arch vgg --depth 19 --beta 100
 ```
 
 ## Prune
-
+The argument `percent` (has to be a value between 0 and 1) is the percentage of channels to be pruned. If it is set to zero, it will remove the channels that have zero scaling factors.
 ```shell
 python vgg_prune_analyze.py --dataset cifar10 --depth 19 --percent 0.0 --model [NAME OF MODEL TO BE PRUNED] --save [DIRECTORY TO SAVE PRUNED MODEL]
 ```

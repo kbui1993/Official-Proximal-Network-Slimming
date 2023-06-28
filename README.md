@@ -18,17 +18,9 @@ Citation:
 }
 ```
 
+You can refer to `script.sh` for examples to train and prune a CNN.
 
-## Dependencies
-torch v0.3.1, torchvision v0.2.0
 
-## Baseline 
-
-The `dataset` argument specifies which dataset to use: `cifar10` or `cifar100`. The `arch` argument specifies the architecture to use: `vgg`,`resnet` or
-`densenet`. The depth is chosen to be the same as the networks used in the paper.
-```shell
-python main.py --dataset cifar10 --arch vgg --depth 19
-```
 
 ## Training
 
@@ -41,6 +33,7 @@ python main.py -sr --s 0.0045 --dataset cifar10 --arch vgg --depth 19 --beta 100
 
 ```shell
 python vgg_prune_analyze.py --dataset cifar10 --depth 19 --percent 0.0 --model [NAME OF MODEL TO BE PRUNED] --save [DIRECTORY TO SAVE PRUNED MODEL]
+```
 The pruned model will have `pruned.pth.tar` at the end of its name.
 
 ## Fine-tune
@@ -48,3 +41,7 @@ The pruned model will have `pruned.pth.tar` at the end of its name.
 ```shell
 python main.py --refine logs/vggnetpruned.pth.tar --dataset cifar10 --arch vgg --depth 19 --epochs 160 --name [REFINED_MODEL_NAME] --save [DIRECTORY TO SAVE MODEL]
 ```
+
+
+## Dependencies
+torch v0.3.1, torchvision v0.2.0

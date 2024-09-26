@@ -1,11 +1,11 @@
 # Official-Proximal-Network-Slimming
 
-This repository is an extension of the repository of [Network Slimming (Pytorch)](https://github.com/Eric-mingjie/network-slimming), an official pytorch implementation of the following paper:
+This repository is for the paper ``A Proximal Algorithm for Network Slimming" (https://arxiv.org/abs/2307.00684). The official paper is published at International Conference on Machine Learning, Optimization, and Data Science, 2023: [here](https://link.springer.com/chapter/10.1007/978-3-031-53966-4_6). This repository is an extension of the repository of [Network Slimming (Pytorch)](https://github.com/Eric-mingjie/network-slimming), an official pytorch implementation of the following paper:
 [Learning Efficient Convolutional Networks Through Network Slimming](http://openaccess.thecvf.com/content_iccv_2017/html/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.html) (ICCV 2017).  
 
 This repository proposes a new proximal algorithm to perform Network Slimming, where it
 trains the CNN towards a sparse, accurate model. As a result, fine-tuning is an optional
-step.
+step. If you're using the code, please cite the following papers:
 
 Citation:
 ```
@@ -15,6 +15,14 @@ Citation:
     booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
     month = {Oct},
     year = {2017}
+}
+@inproceedings{bui2023proximal,
+  title={A Proximal Algorithm for Network Slimming},
+  author={Bui, Kevin and Xue, Fanghui and Park, Fredrick and Qi, Yingyong and Xin, Jack},
+  booktitle={International Conference on Machine Learning, Optimization, and Data Science},
+  pages={69--83},
+  year={2023},
+  organization={Springer}
 }
 ```
 
